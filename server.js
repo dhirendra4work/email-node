@@ -10,15 +10,11 @@ res.sendfile('index.html');
 });
 
 app.get('/send',function(req,res){
-  console.log("got request");
-  console.log(req.query.to);
-  console.log(req.query.subject);
-  console.log(req.query.text);
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'dhirendra4work@gmail.com',
-        pass: ''
+        user: 'YOUR_EMAIL_ID',
+        pass: 'EMAIL_PASSWORD'
     }});
   transporter.sendMail({
 	  from: 'dhirendra4work@gmail.com',
